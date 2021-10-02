@@ -46,7 +46,7 @@ function tabTransition() {
 setInterval(tabTransition, 3000);
 
 function handleTabs() {
-  if (tabCounter === 6) {
+  if (tabCounter === 6 || tabCounter < 1) {
     finalTab.className = 'far fa-circle tab';
     tabCounter = 1;
     previousTabCounter = 0;
