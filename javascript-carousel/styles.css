@@ -72,6 +72,10 @@ i {
   color: black;
 }
 
+.tab:hover {
+  cursor: pointer;
+}
+
 #rightArrow {
   cursor: pointer;
 }

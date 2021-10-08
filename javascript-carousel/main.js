@@ -19,18 +19,44 @@ var leftArrow = document.getElementById('leftArrow')
   ;
 var rightArrow = document.getElementById('rightArrow')
   ;
+var carouselInterval = setInterval(carousel, 3000);
 
 leftArrow.addEventListener('click', function (e) {
   tabCounter = tabCounter - 1;
+  clearInterval(carouselInterval);
+  carouselInterval = setInterval(carousel, 3000);
   handleTabs();
 });
 
 rightArrow.addEventListener('click', function (e) {
   tabCounter = tabCounter + 1;
+  clearInterval(carouselInterval);
+  carouselInterval = setInterval(carousel, 3000);
   handleTabs();
 });
 
-function tabTransition() {
+document.addEventListener('click', function () {
+  if (event.target === tab1) {
+    tabCounter = 1;
+    handleTabs();
+  } else if (event.target === tab2) {
+    tabCounter = 2;
+    handleTabs();
+  } else if (event.target === tab3) {
+    tabCounter = 3;
+    handleTabs();
+  } else if (event.target === tab4) {
+    tabCounter = 4;
+    handleTabs();
+  } else if (event.target === finalTab) {
+    tabCounter = 5;
+    handleTabs();
+  }
+  clearInterval(carouselInterval);
+  carouselInterval = setInterval(carousel, 3000);
+});
+
+function carousel() {
   currentTabName = currentTabName + tabCounter;
   var currentTab = document.getElementById(currentTabName);
   currentTab.className = 'fas fa-circle tab';
@@ -43,7 +69,6 @@ function tabTransition() {
   currentTabName = 'tab';
   previousTabName = 'tab';
 }
-setInterval(tabTransition, 3000);
 
 function handleTabs() {
   if (tabCounter === 6 || tabCounter < 1) {
