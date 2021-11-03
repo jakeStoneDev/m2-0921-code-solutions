@@ -1,0 +1,500 @@
+  133  git add .
+  134  git commit -m "Javascript-forms."
+  135  git push origin javascript-forms
+  136  git status
+  137  git checkout master
+  138  git checkout -b object-manipulation-2
+  139  git checkout object-manipulation-2
+  140  git status
+  141  git status
+  142  git add .
+  143  git commit -m "Complete object-manipulation-2."
+  144  git push origin master object-manipulation-2
+  145  git status
+  146  git checkout master
+  147  git checkout -b css-transition
+  148  git status
+  149  git add .
+  150  git commit -m "Complete css-transitions."
+  151  git push origin css-transition
+  152  git checkout master
+  153  git checkout -b css-transition
+  154  git checkout -b css-transitions
+  155  git status
+  156  git add .
+  157  git commit -m "Complete css-transitions."
+  158  git push origin css-transitions
+  159  git status
+  160  git checkout master
+  161  git checkout -b string-manipulation-3
+  162  git status
+  163  git add .
+  164  git commit -m 'No verify string-manipulation-3." --no-verify
+  165  git push origin string-manipultation-3
+  166  git statys
+  167  :q
+  168  git status
+  169  cd ~/repos/m1-0621-code-solutions/
+  170  git status
+  171  git commit -m "No verify string manipulation 3." --no-verify
+  172  git push origin string-manipulation-3
+  173  git checkout javascript-forms
+  174  git status
+  175  git add .
+  176  git commit -m "Javascript-forms."
+  177  git push origin javascript-forms
+  178  git checkout master
+  179  cd ~/repos/m1-0621-code-solutions/
+  180  git status
+  181  git checkout -b dom-creation
+  182  git status
+  183  git add .
+  184  git commit -m "Complete dom-creation."
+  185  git push origin dom-creation
+  186  git checkout master
+  187  git checkout -b css-media-queries
+  188  git status
+  189  git add .
+  190  git commit -m "complete css-media-queries."
+  191  git push origin css-media-queries
+  192  git status
+  193  git checkout master
+  194  git checkout -b dom-event-delegation
+  195  git status
+  196  git add .
+  197  git commit -m "Complete dom-event-delegation."
+  198  git push origin dom-event-delegation
+  199  git status
+  200  git checkout master
+  201  git checkout -b css-responsive-layout
+  202  git status
+  203  git add .
+  204  git commit -m "Complete css-responsive-layout."
+  205  git push origin css-responsive-layout
+  206  cd ~/repos/m1-0621-code-solutions/
+  207  git status
+  208  git checkout
+  209  git checkout master
+  210  git checkout -b javascript-view-swapping
+  211  git status
+  212  git add .
+  213  git commit -m "Complete javascript-view-swapping."
+  214  git push origin javascript-view-swapping
+  215  git status
+  216  git checkout master
+  217  git checkout -b javascript-and-json
+  218  git add .
+  219  git commit -m "Complete javascript-and-json."
+  220  git push origin javascript-and-json
+  221  git status
+  222  git status
+  223  git add .
+  224  git commit -m "Complete javascript-and-json."
+  225  git push origin javascript-and-json
+  226  cd ~/repos/m1-0621-code-solutions/
+  227  git status
+  228  git checkout master
+  229  git checkout -b array-manipulation-3
+  230  git status
+  231  git add .
+  232  git commit -m "Complete array-manipulation."
+  233  git push origin array-manipulation-3
+  234  git status
+  235  git checkout master
+  236  git checkout -b string-manipulation-3
+  237  git checkout string-manipulation-3
+  238  git status
+  239  git add .
+  240  git commit -m "no verify string-manipulation-3." --no-verify
+  241  git push origin string-manipulation-3
+  242  git checkout master
+  243  cd ~/repos/m1-0621-code-solutions/
+  244  git status
+  245  git checkout -b javascript-local-storage
+  246  git status
+  247  git add .
+  248  git commit -m "Complete javascript-local-storage."
+  249  git push origin javascript-local-storage
+  250  git statys
+  251  git status
+  252  git add .
+  253  git commit -m "Complete javascript local storage."
+  254  git push origin javascript-local-storage
+  255  git status
+  256  git checkout master
+  257  git checkout -b es6-const-let
+  258  git status
+  259  git add .
+  260  git commit -m "ES6-const-let."
+  261  git push origin es6-const-let
+  262  git status
+  263  git checkout master
+  264  git checkout -b es6-template-literals
+  265  git status
+  266  git add .
+  267  git commit -m "Complete es6-template-literals."
+  268  git push origin es6-template-literals
+  269  git status
+  270  git checkout master
+  271  git checkout javascript-local-storage
+  272  git checkout master
+  273  cd ~/repos/
+  274  cd ~/repos
+  275  git@github.com:jakeStoneDev/code-journal.git
+  276  cd ~/repos
+  277  git clone git@github.com:<you>/code-journal.git
+  278  cd code-journal
+  279  clear
+  280  cd ~/repos
+  281  cd ~/repos
+  282  git clone git@github.com:<you>/code-journal.git
+  283  cd code-journal
+  284  clear
+  285  cd ~/repos
+  286  git@github.com:jakeStoneDev/code-journal.git
+  287  git clone git@github.com:jakeStoneDev/code-journal.git
+  288  cd code-journal
+  289  npm ci
+  290  git status
+  291  git status
+  292  cd ~/repos/m1-0621-code-solutions/
+  293  git pull origin master
+  294  git pull origin master
+  295  git status
+  296  cd ~/repos/code-journal/
+  297  git status
+  298  git status
+  299  git add .
+  300  git status
+  301  git commit -m "user-can-create-an-entry #1"
+  302  git status
+  303  git push origin master
+  304  git status
+  305  git checkout -b issue-1-create-an-entry
+  306  git status
+  307  git add .
+  308  git commit -m 'Listen for the submit event on the entry form. #1'
+  309  git push origin issue-1-create-an-entry
+  310  git status
+  311  git status
+  312  git add .
+  313  git commit -m "user-can-create-an-entry #1 with js."
+  314  git push origin issue-1-create-an-entry
+  315  git status
+  316  git status
+  317  git add .
+  318  git commit -m "issue-1-create-an-entry. Unshift form object to the data model."
+  319  git push origin issue-1-create-an-entry
+  320  git status
+  321  git add .
+  322  git commit -m "Built dummy entries and made them look good on mobile and desktop."
+  323  git status
+  324  git add .
+  325  git commit -m "Built two seperate pages on one html file for future view swapping."
+  326  git status
+  327  git add .
+  328  git commit -m "Media queries finished on both pages."
+  329  git status
+  330  git commit -m "Creating DOM elements to append to page."
+  331  git add .
+  332  git commit -m "Creating DOM elements."
+  333  git status
+  334  git add .
+  335  git commit -m "Created DOM elements."
+  336  git status
+  337  git add .
+  338  git commit -m "Completed form that update with user input."
+  339  git add .
+  340  git status
+  341  git commit -m "View swapping complete."
+  342  git status
+  343  git add .
+  344  git commit -m "Functional and css cleaned up."
+  345  git status
+  346  git add .
+  347  git commit -m "local storage stores view and allows page to maintain same view after refresh."
+  348  git status
+  349  git checkout -b issue-2-user-can-view-their-entries
+  350  git status
+  351  git status
+  352  git add .
+  353  git commit -m "Complete issue 2."
+  354  git push origin issue-2-user-can-view-their-entries
+  355  git status
+  356  git add .
+  357  git commit -m "replacing accidentally deleted content."
+  358  git push origin issue-2-user-can-view-their-entries
+  359  git status
+  360  git add .
+  361  git commit -m "loop repaired to show most recent post first."
+  362  git push origin issue-2-user-can-view-their-entries
+  363  git status
+  364  git pull origin master
+  365  git checkout master
+  366  git pull origin master
+  367  git status
+  368  git checkout -b user-can-edit-an-entry #3
+  369  cd ~/repos/code-journal/
+  370  git status
+  371  git status
+  372  git add .
+  373  git commit -m "Posts increment and the event listener for the edit button is set up."
+  374  curl -sS https://lfz-static.s3-us-west-1.amazonaws.com/dev-environment/mac-installer.bash | bash
+  375  dev-env
+  376  dev-env
+  377  dev-env
+  378  git status
+  379  git status
+  380  dev-env
+  381  ls~
+  382  ls ~
+  383  mkdir -p ~/repos
+  384  ls ~
+  385  ls ~/.ssh
+  386  cat ~/.ssh/github_rsa.pub
+  387  cd ~/repos
+  388  git@github.com:jakeStoneDev/m2-0921-code-solutions.git
+  389  ls
+  390  ls
+  391  cd ~/repos
+  392  git clone git@github.com:jakeStoneDev/m2-0921-code-solutions.git
+  393  ls
+  394  git status
+  395  cd ~/repos/m2-0921-code-solutions/`
+  396  cd ~/repos/m2-0921-code-solutions/
+  397  git status
+  398  git checkout -b javascript-custom-methods
+  399  git status
+  400  git add .
+  401  git status
+  402  git commit -m "Completed javascript-custom-methods."
+  403  git push origin javascript-custom-methods
+  404  dev-env
+  405  git status
+  406  git checkout master
+  407  git checkout -b javascript-this
+  408  git status
+  409  git add .
+  410  git commit -m "Complete javascript-this
+  411  ."
+  412  git add .
+  413  git commit -m "Complete javascript this."
+  414  git add .
+  415  git commit-m "Complete javascript-this."
+  416  git commit -m "Complete javascript-this."
+  417  git push origin javascript-this
+  418  git status
+  419  cd ~/repos/m2-0921-code-solutions/
+  420  git status
+  421  git checkout master
+  422  git checkout -b javascript-prototypes
+  423  git status
+  424  cd ~/repos/
+  425  git clone git@github.com:jakeStoneDev/QA-Scripts.git
+  426  git status
+  427  cd ~/repos/
+  428  ls
+  429  git checkout QA-Scripts
+  430  cd ~/repos/QA-Scripts/
+  431  git status
+  432  git status
+  433  git status
+  434  cd ~/repos/
+  435  ls
+  436  cd ~/repos/
+  437  git clone
+  438  git clone git@github.com:jakeStoneDev/QA-Scipts.git
+  439  npm ci
+  440  git status
+  441  cd ~/repos/
+  442  ls
+  443  cd ~/repos/QA-Scipts/
+  444  git status
+  445  git add .
+  446  git status
+  447  git status
+  448  git status
+  449  git add .
+  450  git status
+  451  git commit -m "master files."
+  452  git push origin master
+  453  dev-env
+  454  cd ~/repos/ajax-project/
+  455  git pull origin master
+  456  cd ~/repos/ajax-project/
+  457  git status
+  458  git add .
+  459  git commit -m "https conversion"
+  460  git push origin master
+  461  git status
+  462  git checkout -b https
+  463  git status
+  464  git add .
+  465  git status
+  466  git commit -m "Added https proto."
+  467  git push origin https
+  468  git checkout master
+  469  git pull origin master
+  470  cd ~/repos/
+  471  git clone https://github.com/jakeStoneDev/personal-website.git
+  472  cd ~/repos/
+  473  LS
+  474  git clone https://github.com/jakeStoneDev/personal-website.git
+  475  cd ~/repos/
+  476  ls
+  477  git clone https://github.com/jakeStoneDev/personal-site.git
+  478  npm ci
+  479  git status
+  480  cd ~/repos/
+  481  ls
+  482  cd ~/repos/personal-site/
+  483  git checkout -b structure
+  484  git status
+  485  git add .
+  486  git status
+  487  git commit -m "Main page set up."
+  488  git push origin master
+  489  git push origin structure
+  490  cd ~/repos/
+  491  cd ~/repos/personal-site/
+  492  git status
+  493  git checkout -b main
+  494  git status
+  495  git status
+  496  git add .
+  497  git commit -m "Add to main"
+  498  git push origin main
+  499  O8XrtArne5SKgD@ZOzn6
+  500  cd ~/repos/
+  501  ls
+  502  cd ~/repos/m2-0921-code-solutions/
+  503  git status
+  504  git checkout -b es6-const-let
+  505  git status
+  506  git add .
+  507  git status
+  508  git commit -m "Complete es6-const-let."
+  509  git push origin es6-const-let
+  510  git checkout master
+  511  git checkout -b es6-template-literals
+  512  git checkout master
+  513  git checkout es6-const-let
+  514  git status
+  515  git add .
+  516  git commit -m "var removed and let put in proper place."
+  517  git push origin es6-const-let
+  518  git checkout master
+  519  git checkout -b es6-template-literals
+  520  git checkout master
+  521  git checkout es6-template-literals
+  522  git status
+  523  git add .
+  524  git commit -m "es6-template-literals converted to template literals."
+  525  git push origin es6-template-literals
+  526  git checkout master
+  527  git checkout -b es6-destructuring
+  528  git checkout es6-template-literals
+  529  git status
+  530  git status
+  531  git add .
+  532  git status
+  533  git commit -m "Removed space from applepen."
+  534  git push origin es6-template-literals
+  535  git checkout master
+  536  git status
+  537  git checkout es6-destructuring
+  538  git checkout master
+  539  git checkout es6-template-literals
+  540  git status
+  541  git add .
+  542  git status
+  543  git commit -m "Removed space from address."
+  544  git push origin es6-template-literals
+  545  git checkout master
+  546  git checkout es6-destructuring
+  547  git status
+  548  git add .
+  549  git commit -m "Complete, submitting es6-destructuring for approval."
+  550  git push origin es6-destructuring
+  551  git checkout master
+  552  git checkout -b es6-arrow-functions
+  553  git status
+  554  git add .
+  555  git commit -m "Complete arrow functions."
+  556  git push origin es6-arrow-functions
+  557  git checkout master
+  558  git checkout -b command-line-basics
+  559  git status
+  560  pwd
+  561  cd command-line-basics
+  562  pwd
+  563  man man
+  564  man cat
+  565  man cat
+  566  cat laziness.txt
+  567  cat impatience.txt
+  568  cat hubris.txt
+  569  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  570  ls
+  571  cat three-virtues.txt
+  572  ls
+  573  man ls
+  574  ls
+  575  ls lfz-staff/
+  576  ls -a lfz-staff/
+  577  ls -F lfz-staff/
+  578  ls -aF lfz-staff > lfz-staff/contents.txt
+  579  cat lfz-staff/contents.txt
+  580  man pwd
+  581  pwd
+  582  pwd > i-was-here.txt
+  583  ls
+  584  cat i-was-here.txt
+  585  man echo
+  586  echo 'Hello, World!'
+  587  echo 'Hello, World!' > hello.txt
+  588  ls
+  589  cat hello.txt
+  590  man touch
+  591  man touch
+  592  touch tag-youre-it.txt
+  593  touch snoot/boop.txt
+  594  ls snoot/
+  595  man mkdir
+  596  mkdir parent
+  597  ls parent/
+  598  ls
+  599  mkdir -parent/child/grandchild
+  600  mkdir -p parent/child/grandchild
+  601  ls
+  602  ls -a
+  603  mkdir -p parent/child/grandchild
+  604  ls
+  605  touch parent/child/grandchild/.gitkeep
+  606  ls -a
+  607  ls parent/child/grandchild
+  608  ls
+  609  cat parent/child/grandchild
+  610  ls
+  611  pwd
+  612  ls parent/child/grandchild
+  613  ls
+  614  ls parent/child/grandchild
+  615  touch parent/child/grandchild/.gitkeep
+  616  ls parent/child/grandchild
+  617  ls -a parent/child/grandchild
+  618  man mv
+  619  man mv
+  620  mv pokiemans pokemon
+  621  ls
+  622  man rm
+  623  rm lol.txt
+  624  ls
+  625  rm -r kill-me/
+  626  ls
+  627  man cp
+  628  cp and-then.txt no-and-then.txt
+  629  ls
+  630  man history
+  631  history
+  632  history > command-history.txt
