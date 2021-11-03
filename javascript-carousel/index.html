@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="row">
+      <div class="col-tenth">
+        <div class="arrow">
+          <i id="leftArrow" class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+      <div class="col-80">
+        <div class="img-container">
+            <img id="img1" class="show" src="images/img1.png">
+            <img id="img2" class="hidden" src="images/img2.png">
+            <img id="img3" class="hidden" src="images/img3.png">
+            <img id="img4" class="hidden" src="images/img4.png">
+            <img id="img5" class="hidden" src="images/img5.png">
+        </div>
+      </div>
+      <div class="col-tenth">
+        <div class="arrow">
+          <i id="rightArrow" class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="tabs">
+          <i id="tab1" class="fas fa-circle tab"></i>
+          <i id="tab2" class="far fa-circle tab"></i>
+          <i id="tab3" class="far fa-circle tab"></i>
+          <i id="tab4" class="far fa-circle tab"></i>
+          <i id="tab5" class="far fa-circle tab"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
