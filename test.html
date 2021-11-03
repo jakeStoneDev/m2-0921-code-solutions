@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.5">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tests - JavaScript Custom Methods</title>
+  <title>Tests - JavaScript this</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.2.0/mocha.min.css">
   <style>
     #mocha h1 {
@@ -38,7 +38,9 @@
 </head>
 <body>
   <div id="mocha">
-    <h1 id="page-title">Tests - JavaScript Custom Methods</h1>
+
+    <h1 id="page-title">Tests - JavaScript this</h1>
+
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.2.0/mocha.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.js"></script>
@@ -47,10 +49,9 @@
     var expect = chai.expect;
     mocha.setup('bdd');
   </script>
-  <script src="doggo.js"></script>
-  <script src="doggo.test.js"></script>
-  <script src="calculator.js"></script>
-  <script src="calculator.test.js"></script>
+  <script src="student.js"></script>
+  <script src="student.test.js"></script>
+
   <script>
     mocha.run();
   </script>
