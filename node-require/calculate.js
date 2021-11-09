@@ -12,41 +12,12 @@ if (argv.length > 2) {
   console.log('Enter numbers');
 }
 
-const operation = {
-  add: false,
-  subtract: false,
-  divide: false,
-  multiply: false
-};
-
 if (operand === 'plus') {
-  operation.add = true;
-  operation.subtract = false;
-  operation.divide = false;
-  operation.multiply = false;
-} else if (operand === 'minus') {
-  operation.add = false;
-  operation.subtract = true;
-  operation.divide = false;
-  operation.multiply = false;
-} else if (operand === 'over') {
-  operation.add = false;
-  operation.subtract = false;
-  operation.divide = true;
-  operation.multiply = false;
-} else if (operand === 'times') {
-  operation.add = false;
-  operation.subtract = false;
-  operation.divide = false;
-  operation.multiply = true;
-}
-
-if (operation.add === true) {
   add(param1, param2);
-} else if (operation.subtract === true) {
+} else if (operand === 'minus') {
   subtract(param1, param2);
-} else if (operation.multiply === true) {
-  multiply(param1, param2);
-} else if (operation.divide === true) {
+} else if (operand === 'over') {
   divide(param1, param2);
+} else if (operand === 'times') {
+  multiply(param1, param2);
 }

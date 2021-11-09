@@ -1,5 +1,5 @@
 module.exports = function subtract(a, b) {
-  const num1 = parseInt(a);
-  const num2 = parseInt(b);
+  const num1 = parseFloat(a);
+  const num2 = parseFloat(b);
   console.log('result: ', num1 - num2);
 };
