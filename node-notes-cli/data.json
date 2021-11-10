@@ -1,5 +1,5 @@
 {
-  "nextId": 33,
+  "nextId": 35,
   "notes": {
     "2": "Prototypal inheritance is how JavaScript objects delegate behavior.",
     "4": "A closure is formed when a function retains access to variables in its lexical scope.",
@@ -19,6 +19,8 @@
     "26": "im updoot 26",
     "27": "I just want to hey.",
     "28": "I just want to hey.",
-    "32": "I just want to Nye the science guy."
+    "32": "I just want to Nye the science guy.",
+    "33": "im a new one",
+    "34": "im a new one"
   }
 }
