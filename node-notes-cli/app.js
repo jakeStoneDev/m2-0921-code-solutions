@@ -18,15 +18,42 @@ if (process.argv[2].toString() === 'create') {
       throw err;
     }
     const content = JSON.parse(data);
-    console.log('content:', content);
-
     const thisKey = content.nextId;
     content.nextId = thisKey + 1;
-    console.log(content.nextId);
-    const value = process.argv[3];
+    var value;
+    value = process.argv[3];
+    console.log('input', value);
     Object.assign(content.notes, { [thisKey]: value });
+    const contentStri = JSON.stringify(content, null, 2);
+    fs.writeFileSync('data.json', contentStri);
+  });
+}
 
-    var contentStri = JSON.stringify(content);
+if (process.argv[2].toString() === 'delete') {
+  fs.readFile('data.json', 'utf-8', function read(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    var errorPrint = false;
+    const content = JSON.parse(data);
+    for (var key in content.notes) {
+      if (key !== process.argv[3]) {
+        errorPrint = true;
+      }
+      if (key === process.argv[3]) {
+        var keyMatch = key.toString();
+        console.log(keyMatch);
+        console.log('2nd', content.notes[keyMatch]);
+        delete content.notes[keyMatch];
+        console.log(content);
+      }
+    }
+    if (errorPrint) {
+      console.log('This key does not match our records');
+      errorPrint = false;
+    }
+    const contentStri = JSON.stringify(content, null, 2);
     fs.writeFileSync('data.json', contentStri);
   });
 }
