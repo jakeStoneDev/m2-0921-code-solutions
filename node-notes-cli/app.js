@@ -24,10 +24,13 @@ if (process.argv[2].toString() === 'create') {
     content.nextId = thisKey + 1;
     var value;
     value = process.argv[3];
-    console.log('Added.');
+
     Object.assign(content.notes, { [thisKey]: value });
     const contentStri = JSON.stringify(content, null, 2);
-    fs.writeFileSync('data.json', contentStri);
+    fs.writeFile('data.json', contentStri, err => {
+      if (err) throw err;
+      console.log('Added.');
+    });
   });
 }
 
@@ -48,10 +51,12 @@ if (process.argv[2].toString() === 'delete') {
       if (key === process.argv[3]) {
         var keyMatch = key.toString();
         delete content.notes[keyMatch];
-        console.log('Deleted.');
         errorPrint = false;
         const contentStri = JSON.stringify(content, null, 2);
-        fs.writeFileSync('data.json', contentStri);
+        fs.writeFile('data.json', contentStri, err => {
+          if (err) throw err;
+          console.log('Deleted.');
+        });
         return;
       }
     }
@@ -77,9 +82,11 @@ if (process.argv[2].toString() === 'update') {
       if (key === process.argv[3]) {
         var keyMatch = key.toString();
         content.notes[keyMatch] = process.argv[4];
-        console.log('Updated.');
         const contentStri = JSON.stringify(content, null, 2);
-        fs.writeFileSync('data.json', contentStri);
+        fs.writeFile('data.json', contentStri, err => {
+          if (err) throw err;
+          console.log('Updated.');
+        });
         return;
       }
     }
