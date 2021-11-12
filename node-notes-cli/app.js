@@ -24,6 +24,7 @@ if (process.argv[2].toString() === 'create') {
     content.nextId = thisKey + 1;
     var value;
     value = process.argv[3];
+    console.log('Added.');
     Object.assign(content.notes, { [thisKey]: value });
     const contentStri = JSON.stringify(content, null, 2);
     fs.writeFileSync('data.json', contentStri);
