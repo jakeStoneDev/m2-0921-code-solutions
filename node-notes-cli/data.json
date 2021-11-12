@@ -1,0 +1,30 @@
+{
+  "nextId": 42,
+  "notes": {
+    "2": "Prototypal inheritance is how JavaScript objects delegate behavior.",
+    "4": "A closure is formed when a function retains access to variables in its lexical scope.",
+    "5": "hey",
+    "6": "hey",
+    "7": "hey",
+    "8": "hey",
+    "11": "hey",
+    "14": "I just want to fly.",
+    "16": "I just want to fly.",
+    "19": "I just want to fly.",
+    "21": "im 22 now",
+    "22": "I just want to bye.",
+    "23": "im updoot 26",
+    "24": "I just want to bye.",
+    "25": "I just want to hey.",
+    "26": "im updoot 26",
+    "27": "I just want to hey.",
+    "28": "I just want to hey.",
+    "32": "I just want to Nye the science guy.",
+    "33": "Now I'm the newest!",
+    "34": "Now i'm the newest!",
+    "37": "bye now",
+    "38": "hey there",
+    "40": "hey there",
+    "41": "hilow"
+  }
+}
