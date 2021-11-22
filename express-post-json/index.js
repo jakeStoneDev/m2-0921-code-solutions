@@ -1,15 +1,25 @@
 const express = require('express');
 const app = express();
 
-var nextId = 1;
-var grades = {};
+app.use(express.json());
 
-app.post(' / api / grades', function (res, req) {
-  res.status(204).send();
+var nextId = 1;
+var arr = [];
+
+app.get('/api/grades', (req, res) => {
+  res.json(arr);
+});
+
+app.post('/api/grades', (req, res) => {
+  res.status(201);
+  let obj = {};
+  obj = req.body;
+  obj.nextId = nextId;
+  nextId++;
+  arr.push(obj);
+  res.json(obj);
 });
 
 app.listen(3000, () => {
-  console.log('listening 3000');
+  // console.log('beep boop 3000');
 });
-
-app.use(express.json());
