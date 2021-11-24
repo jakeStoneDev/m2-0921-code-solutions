@@ -21,8 +21,8 @@ app.get('/api/notes/:id', function (req, res, next) {
 
 app.get('/api/notes', function (req, res) {
   const arr = [];
-  fs.readFile('data.json', function (err, data) {
-    if (err) throw err;
+  fs.readFile('./data.json', function (err, data) {
+    if (err) { res.status(404).send('This note does not exist'); }
     data = JSON.parse(data);
     for (const keys in data.notes) {
       arr.push(data.notes[keys]);
@@ -32,7 +32,23 @@ app.get('/api/notes', function (req, res) {
 });
 
 app.post('/api/notes', function (req, res) {
+  res.status(201);
+  fs.readFile('data.json', function (err, data) {
+    if (err) { res.status(404).send('This note does not exist'); }
+    const newObj = req.body;
+    data = JSON.parse(data);
+    const thisKey = data.nextId;
+    newObj.id = thisKey;
+    data.nextId = thisKey + 1;
 
+    const value = newObj;
+    Object.assign(data.notes, { [thisKey]: value });
+    const contentStri = JSON.stringify(data, null, 2);
+    fs.writeFile('./data.json', contentStri, err => {
+      if (err) throw err;
+      console.log('Added.');
+    });
+  });
 });
 
 app.listen(3000, () => {
