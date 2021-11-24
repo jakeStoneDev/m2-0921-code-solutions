@@ -5,7 +5,21 @@ const fs = require('fs');
 
 app.use(express.json());
 
-app.get('/api/notes/:id', function (req, res, next) {
+// User can get an array of notes
+app.get('/api/notes', function (req, res) {
+  const arr = [];
+  fs.readFile('./data.json', function (err, data) {
+    if (err) { res.status(404).send('This note does not exist'); }
+    data = JSON.parse(data);
+    for (const keys in data.notes) {
+      arr.push(data.notes[keys]);
+    }
+    res.json(arr);
+  });
+});
+
+// User can GET a single note by id
+app.get('/api/notes/:id', function (req, res) {
   const Id = parseInt(req.params.id);
   fs.readFile('./data.json', 'utf8', function (err, data) {
     if (err) { res.status(404).send('This note does not exist'); }
@@ -19,18 +33,7 @@ app.get('/api/notes/:id', function (req, res, next) {
   });
 });
 
-app.get('/api/notes', function (req, res) {
-  const arr = [];
-  fs.readFile('./data.json', function (err, data) {
-    if (err) { res.status(404).send('This note does not exist'); }
-    data = JSON.parse(data);
-    for (const keys in data.notes) {
-      arr.push(data.notes[keys]);
-    }
-    res.json(arr);
-  });
-});
-
+// User can create a new note
 app.post('/api/notes', function (req, res) {
   fs.readFile('data.json', function (err, data) {
     if (err) { res.status(500).send('An unexpected error occurred.'); }
@@ -45,8 +48,8 @@ app.post('/api/notes', function (req, res) {
 
     const value = newObj;
     Object.assign(data.notes, { [thisKey]: value });
-    const contentStri = JSON.stringify(data, null, 2);
-    fs.writeFile('./data.json', contentStri, err => {
+    const dataStr = JSON.stringify(data, null, 2);
+    fs.writeFile('./data.json', dataStr, err => {
       if (err) throw err;
       res.status(201);
       res.json(newObj);
@@ -54,6 +57,44 @@ app.post('/api/notes', function (req, res) {
   });
 });
 
-app.listen(3000, () => {
-  // console.log('beep boop 3000');
+// User can DELETE a single note
+app.delete('/api/notes/:id', function (req, res) {
+  const Id = parseInt(req.params.id);
+  fs.readFile('./data.json', 'utf8', function (err, data) {
+    if (err) { res.status(404).send('This note does not exist'); }
+    data = JSON.parse(data);
+    if (data.notes[Id] === undefined) {
+      res.status(404).send('This note does not exist');
+    } else if (data.notes[Id].id === Id) {
+      res.status(200);
+      delete data.notes[Id];
+      const dataStr = JSON.stringify(data, null, 2);
+      fs.writeFile('data.json', dataStr, err => {
+        if (err) { res.status(500).send('An unexpected error occurred.'); }
+      });
+      res.json(res.body);
+    }
+  });
 });
+
+// User can replace a note (PUT) by id
+app.put('/api/notes/:id', function (req, res) {
+  const Id = parseInt(req.params.id);
+  fs.readFile('./data.json', 'utf8', function (err, data) {
+    if (err) { res.status(404).send('This note does not exist'); }
+    data = JSON.parse(data);
+    if (data.notes[Id] === undefined) {
+      res.status(404).send('This note does not exist');
+    } else if (data.notes[Id].id === Id) {
+      res.status(200);
+      data.notes[Id].content = req.body.content;
+      res.send(data.notes[Id]);
+      const dataStr = JSON.stringify(data, null, 2);
+      fs.writeFile('data.json', dataStr, err => {
+        if (err) { res.status(500).send('An unexpected error occurred.'); }
+      });
+    }
+  });
+});
+
+app.listen(3000);
