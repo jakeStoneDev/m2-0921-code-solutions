@@ -32,10 +32,12 @@ app.get('/api/notes', function (req, res) {
 });
 
 app.post('/api/notes', function (req, res) {
-  res.status(201);
   fs.readFile('data.json', function (err, data) {
-    if (err) { res.status(404).send('This note does not exist'); }
+    if (err) { res.status(500).send('An unexpected error occurred.'); }
     const newObj = req.body;
+    if (!newObj.content) {
+      res.status(400).send('All posts must include content');
+    }
     data = JSON.parse(data);
     const thisKey = data.nextId;
     newObj.id = thisKey;
@@ -46,7 +48,8 @@ app.post('/api/notes', function (req, res) {
     const contentStri = JSON.stringify(data, null, 2);
     fs.writeFile('./data.json', contentStri, err => {
       if (err) throw err;
-      console.log('Added.');
+      res.status(201);
+      res.json(newObj);
     });
   });
 });
