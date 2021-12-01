@@ -1,5 +1,5 @@
 /* exported calculator */
-const calculator={
+const calculator = {
   add: function (x, y) {
     var sum = x + y;
     return sum;
@@ -22,7 +22,7 @@ const calculator={
   },
   sumAll: function (numbers) {
     var total = 0;
-    for(var i = 0; i < numbers.length; i++){
+    for (var i = 0; i < numbers.length; i++) {
       total = total + numbers[i];
     }
     return total;
@@ -35,4 +35,6 @@ const calculator={
     var average = total / numbers.length;
     return average;
   }
-}
+};
+// eslint-disable-next-line no-console
+console.log(calculator);
