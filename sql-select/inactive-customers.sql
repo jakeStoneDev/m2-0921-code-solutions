@@ -1,3 +1,3 @@
 select *
 from "customers"
-where "isActive" <> 't'
+where "isActive" <> 'true'

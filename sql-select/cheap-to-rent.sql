@@ -1,5 +1,5 @@
 select "filmId",
       "title"
 from "films"
-order by "rentalRate" ASC
+where "rentalRate" < 1.00
 limit 50
