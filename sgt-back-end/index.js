@@ -39,6 +39,10 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
         res.status(404).json({
           error: `Cannot find grade with "gradeId" ${gradeId}`
         });
+      }
+      if (!result.rows[0]) {
+        res.status(404).send('404 Id not found');
+        res.end();
       } else {
         res.json(grade[0]);
       }
@@ -183,6 +187,6 @@ app.delete('/api/grades/:gradeId', function (req, res) {
       res.status(404).send('404 Id not found');
       res.end();
     }
-    res.status(204);
+    res.status(204).send();
   });
 });
