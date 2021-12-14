@@ -153,7 +153,7 @@ app.put('/api/grades/:gradeId', function (req, res) {
     res.end();
     return;
   }
-  if (!score) {
+  if (!score && score !== 0) {
     res.status(400).send('Score is required');
     res.end();
     return;
