@@ -39,6 +39,8 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
         res.status(404).json({
           error: `Cannot find grade with "gradeId" ${gradeId}`
         });
+        res.end();
+        return;
       }
       if (!result.rows[0]) {
         res.status(404).send('404 Id not found');
@@ -94,24 +96,29 @@ app.post('/api/grades', function (req, res) {
   if (!name) {
     res.status(400).send('Name is required');
     res.end();
+    return;
   }
   if (!course) {
     res.status(400).send('Course is required');
     res.end();
+    return;
   }
   if (!score) {
     res.status(400).send('Score is required');
     res.end();
+    return;
   }
   if (numScore < 0 || numScore > 100) {
     res.status(400).send('Score must be between 0 and 100');
     res.end();
+    return;
   }
 
   db.query(text, values, (err, result) => {
     if (err) {
       res.status(500).send('An unexpected error occurred');
       res.end();
+      return;
     }
     res.status(201);
     res.json(result.rows[0]);
@@ -133,34 +140,40 @@ app.put('/api/grades/:gradeId', function (req, res) {
   const course = req.body.course;
   const score = req.body.score;
   const numScore = parseInt(score);
-  const text = `UPDATE grades SET name = $1, course = $2, score= $3 WHERE "grades"."gradeId" = ${gradeId} returning *`;
-  const values = [name, course, score];
+  const text = 'UPDATE grades SET name = $1, course = $2, score= $3 WHERE gradeId = $4 returning *';
+  const values = [name, course, score, gradeId];
 
   if (!name) {
     res.status(400).send('Name is required');
     res.end();
+    return;
   }
   if (!course) {
     res.status(400).send('Course is required');
     res.end();
+    return;
   }
   if (!score) {
     res.status(400).send('Score is required');
     res.end();
+    return;
   }
   if (numScore < 0 || numScore > 100) {
     res.status(400).send('Score must be between 0 and 100');
     res.end();
+    return;
   }
 
   db.query(text, values, (err, result) => {
     if (err) {
       res.status(500).send('An unexpected error occurred');
       res.end();
+      return;
     }
     if (!result.rows[0]) {
       res.status(404).send('404 Id not found');
       res.end();
+      return;
     }
     res.status(200);
     res.json(result.rows[0]);
@@ -176,16 +189,19 @@ app.delete('/api/grades/:gradeId', function (req, res) {
     });
     res.end();
   }
-  const text = `DELETE FROM "grades" WHERE "grades"."gradeId" = ${gradeId} returning *`;
+  const text = 'DELETE FROM "grades" WHERE gradeId = $1 returning *';
+  const values = [gradeId];
 
-  db.query(text, (err, result) => {
+  db.query(text, values, (err, result) => {
     if (err) {
       res.status(500).send('An unexpected error occurred');
       res.end();
+      return;
     }
     if (!result.rows[0]) {
       res.status(404).send('404 Id not found');
       res.end();
+      return;
     }
     res.status(204).send();
   });
